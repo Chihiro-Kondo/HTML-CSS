@@ -1,16 +1,20 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
 .Header {
 width: 100%;
+padding: 0;
 }
 
 .Header {
 background-color: #FFFFFF;
 display: grid;
-height: 70px;
 }
 
 .Header--common {
@@ -21,7 +25,8 @@ height: 70px;
   display: flex;
   margin: 0 36px 0 36px;
   position: relative;
-  width: 100%;
+  width: auto;
+  height: 70px;
   justify-content: space-between;
 }
 
@@ -53,10 +58,12 @@ width: auto;
   display:flex;
   align-items: center;
   justify-content: space-between;
-}
+  }
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .HeaderNavListItem {
@@ -70,10 +77,10 @@ ul {
  justify-content: center;
  flex-direction: column;
  border: none;
- font-size: 12px;
+ font-size: 10px;
  font-weight: 700;
  border-radius: 38px;
- padding:0px 20px;
+ padding:0 5px;
  height: 40px;
  width: 100%;
  text-decoration: none;
@@ -97,7 +104,7 @@ a {
 }
 
 .HeaderNavListItem__link>span:first-child {
-  font-family: "Lato", sans-serif;
+  font-family:"Lato", sans-serif;
   font-size: 12px;
   line-height: 14.4px;
 }
@@ -233,10 +240,17 @@ img.lazy {
 
 @media screen and (max-width:767px){
   .Header {
-   padding-top:15px;
-   padding-bottom: 15px; 
+   padding: 0;
    }
 } 
+
+@media screen and (max-width:414px){
+  .Header {
+   height: 48px;
+   padding:0;
+   }
+} 
+
 @media screen and (max-width:1080px){
   .Header {
    background-color: #FFFFFF;
@@ -268,6 +282,7 @@ img.lazy {
   .HeaderContainer {
    max-width:100%;
    margin: 0 16px;
+   height: 48px;
   }
 }
 
@@ -338,6 +353,12 @@ transition: opacity 0.2s;
 }
 
 @media screen and (max-width:767px){
+.FirstView {
+ height: fit-content;
+ }
+}
+
+@media screen and (max-width:767px){
 .FirstView__bg-image{
   display: none;
 }
@@ -388,7 +409,7 @@ transition: opacity 0.2s;
   }
 }
 @media screen and (max-width:767px){
-.FirstViewContent__budge-image{
+.FirstViewContent__badge-image {
   height: 102px;
   width: 102px;
   top:-20px;
